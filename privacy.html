@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Политика конфиденциальности — NomadPath</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+      color: #e0e0e0;
+      background: #121212;
+      line-height: 1.7;
+    }
+    h1 { color: #00e5ff; font-size: 1.8rem; margin-bottom: 4px; }
+    h2 { color: #80deea; font-size: 1.15rem; margin-top: 32px; }
+    p, li { color: #bdbdbd; }
+    ul { padding-left: 20px; }
+    a { color: #00e5ff; }
+    .updated { color: #757575; font-size: 0.85rem; margin-bottom: 32px; }
+    hr { border-color: #2a2a2a; margin: 32px 0; }
+  </style>
+</head>
+<body>
+
+  <h1>Политика конфиденциальности</h1>
+  <p class="updated">Последнее обновление: 2 апреля 2026 г.</p>
+
+  <p>
+    Настоящая политика конфиденциальности описывает, как приложение
+    <strong>NomadPath</strong> («мы», «приложение») собирает, использует и
+    защищает ваши данные. Используя приложение, вы соглашаетесь с условиями
+    данной политики.
+  </p>
+
+  <h2>1. Разработчик</h2>
+  <p>
+    NomadPath — индивидуальный разработчик.<br />
+    Контакт: <a href="mailto:nomadpath.ru@gmail.com">nomadpath.ru@gmail.com</a>
+  </p>
+
+  <h2>2. Какие данные мы собираем</h2>
+  <ul>
+    <li><strong>Учётная запись:</strong> email-адрес и идентификатор пользователя через Firebase Authentication (Google Sign-In или email/пароль).</li>
+    <li><strong>Геолокация:</strong> координаты GPS для записи маршрутов и отображения на карте. Сбор происходит только при явном запуске трекинга пользователем, в том числе в фоновом режиме при активном сеансе записи.</li>
+    <li><strong>Данные здоровья:</strong> количество шагов, пройденное расстояние, сожжённые калории — через Android Health Connect. Данные используются исключительно для отображения статистики внутри приложения.</li>
+    <li><strong>Голосовой ввод:</strong> аудио с микрофона используется для распознавания речи при взаимодействии с ИИ-ассистентом. Аудио не сохраняется и не передаётся третьим лицам.</li>
+    <li><strong>Контент пользователя:</strong> квесты, дневниковые записи, заметки, финансовые данные — хранятся в облаке Firebase Firestore и привязаны к вашему аккаунту.</li>
+    <li><strong>Техническая информация:</strong> тип устройства, версия ОС, логи ошибок — для диагностики и улучшения приложения.</li>
+  </ul>
+
+  <h2>3. Разрешения приложения</h2>
+  <ul>
+    <li><strong>INTERNET, ACCESS_NETWORK_STATE</strong> — для синхронизации данных с облаком и работы ИИ.</li>
+    <li><strong>RECORD_AUDIO</strong> — для голосового ввода в ИИ-ассистент.</li>
+    <li><strong>ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION</strong> — для трекинга маршрутов на карте.</li>
+    <li><strong>ACCESS_BACKGROUND_LOCATION</strong> — для продолжения записи маршрута при свёрнутом приложении.</li>
+    <li><strong>FOREGROUND_SERVICE, FOREGROUND_SERVICE_LOCATION</strong> — для работы фонового сервиса трекинга.</li>
+    <li><strong>POST_NOTIFICATIONS</strong> — для уведомлений о квестах и событиях.</li>
+    <li><strong>ACTIVITY_RECOGNITION</strong> — для подсчёта шагов.</li>
+    <li><strong>Health Connect (READ_STEPS, READ_DISTANCE, READ_ACTIVE_CALORIES_BURNED)</strong> — для чтения данных о физической активности из Health Connect.</li>
+  </ul>
+
+  <h2>4. Как мы используем данные</h2>
+  <ul>
+    <li>Авторизация и идентификация пользователя.</li>
+    <li>Хранение игрового прогресса, квестов и записей дневника.</li>
+    <li>Генерация персонализированных квестов и ответов ИИ-ассистента.</li>
+    <li>Отображение статистики активности и маршрутов.</li>
+    <li>Улучшение приложения на основе агрегированных данных об ошибках.</li>
+  </ul>
+
+  <h2>5. Передача данных третьим лицам</h2>
+  <p>Мы не продаём и не передаём ваши персональные данные третьим лицам. Данные обрабатываются следующими сервисами:</p>
+  <ul>
+    <li><strong>Google Firebase</strong> (Authentication, Firestore) — хранение данных аккаунта и контента. <a href="https://firebase.google.com/support/privacy" target="_blank">Политика Google</a>.</li>
+    <li><strong>Google Gemini API</strong> — обработка текстовых запросов для ИИ-функций. Запросы не содержат персональных данных. <a href="https://policies.google.com/privacy" target="_blank">Политика Google</a>.</li>
+    <li><strong>Google Play Billing</strong> — обработка внутриигровых покупок. <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank">Политика Google Payments</a>.</li>
+  </ul>
+
+  <h2>6. Хранение и защита данных</h2>
+  <p>
+    Данные хранятся на серверах Google Firebase в соответствии со стандартами
+    безопасности Google. Локально на устройстве данные кэшируются в зашифрованном
+    хранилище Hive для работы в офлайн-режиме.
+  </p>
+
+  <h2>7. Удаление данных</h2>
+  <p>
+    Вы можете удалить свой аккаунт и все связанные данные в любой момент через
+    раздел <strong>Профиль → Удалить аккаунт</strong> внутри приложения. Все
+    данные на серверах удаляются безвозвратно в течение 30 дней.
+  </p>
+
+  <h2>8. Данные детей</h2>
+  <p>
+    Приложение не предназначено для детей до 13 лет. Мы не собираем намеренно
+    данные пользователей младше 13 лет.
+  </p>
+
+  <h2>9. Изменения политики</h2>
+  <p>
+    О существенных изменениях политики конфиденциальности мы уведомим через
+    уведомление в приложении. Продолжение использования приложения после
+    публикации изменений означает ваше согласие с ними.
+  </p>
+
+  <h2>10. Контакты</h2>
+  <p>
+    По вопросам конфиденциальности пишите на:
+    <a href="mailto:nomadpath.ru@gmail.com">nomadpath.ru@gmail.com</a>
+  </p>
+
+  <hr />
+  <p style="color:#555; font-size:0.8rem;">© 2026 NomadPath. Все права защищены.</p>
+
+</body>
+</html>
